@@ -1,0 +1,161 @@
+/*-------------------------------------------
+モバイル端末
+-------------------------------------------*/
+@media (max-width: 600px) {
+    /* Header */
+    #home {
+        background-image: url("../img/main-header-lp.png");
+        align-items: center;
+    }
+
+    #home .page-header {
+        padding-top: 6rem;
+    }
+
+    #home .page-header .nav-space {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-space h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    #home h1 a span {
+        font-size: 28px;
+    }
+    
+    #home h1 a span.rotate-word {
+        font-size: 40px;
+    }
+
+    #home .page-header nav {
+        width: 100%;
+        display: inline-block;
+    }
+
+    #home .page-header nav .header-nav-button {
+        height: 40px;
+        width: 40px;
+        margin: 0 0.5rem;
+    }
+
+    #home .page-header nav .header-nav-button:first-child {
+        margin-left: 0;
+    }
+    
+    #home .page-header nav .header-nav-button:hover {
+        width: 160px;
+    }
+    
+    #home .page-header nav .header-nav-button .header-icon {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
+    
+    #home .page-header nav .header-nav-button .header-icon i {
+        font-size: 22px;
+        line-height: 40px;
+    }
+    
+    #home .page-header nav .header-nav-button span {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-left: 10px;
+    }
+
+    .page-header .ul-space li:nth-child(2){
+        display: none;
+    }
+
+    .page-header .ul-space li:nth-child(3){
+        display: none;
+    }
+
+    /* SideNav */
+    .side-nav nav{
+        width: 100%;
+        top: -300px;
+        left: 0px;
+    }
+
+    .side-nav ul li {
+        transition: all 0.1s;
+    }
+
+    .side-nav .nav-btn {
+        z-index: 9999;
+    }
+
+    .open nav {
+        opacity: 0.7;
+    }
+    
+    @keyframes SideNav {
+        100% {
+            top: 0;
+        }
+    }
+
+    /* Main */
+    .page-title {
+        font-size: 22px;
+    }
+
+    .content-in {
+        flex-direction: column;
+    }
+
+    #main {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .main-contents article dl {
+        flex-direction: column;
+    }
+
+    .main-contents article dt {
+        width: 100%;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .main-contents article dd {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .slider {
+        padding: 0;
+    }
+
+    .slider img {
+        width:60vw;
+    }
+    
+    /* サイドコンテンツ */
+    #sidebar {
+        width: 100%;
+    }
+
+    /* 自己紹介 */
+    .introduction-content {
+        padding: 30px;
+    }
+
+    .lk-music-artist iframe {
+        height: 160px;
+    }
+
+    /* 検索エリア */
+    #search-wrap.panelactive {
+        align-items: flex-start;
+    }
+
+    #search-wrap.panelactive .search-area {
+        margin-top: 12rem;
+    }
+}

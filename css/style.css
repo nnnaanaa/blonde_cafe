@@ -1,0 +1,181 @@
+/*-------------------------------------------
+Root
+-------------------------------------------*/
+:root {
+    --main-text-color: #24292e;
+    --main-background-color: #fff;
+}
+
+/*-------------------------------------------
+共通
+-------------------------------------------*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-background-color);
+    color: var(--main-text-color);
+    font-size: 100%;
+    height: 100vh;
+    font-family: "Noto Sans JP";
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1256px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.page-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.sub-title {
+    text-align:  center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.header {
+    height: 100vh;
+    background-image: url("../img/main-header.png");
+}
+
+.big-bg {
+    background-size: cover;
+    background-position: center top;
+}
+
+.header-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    padding: 2rem auto;
+}
+
+section.upper-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.upper-content h1 {
+    font-size: 3rem;
+}
+
+section.upper-content h1 a {
+    color: var(--main-background-color);
+}
+
+/*-------------------------------------------
+ヘッダーナビゲーション
+-------------------------------------------*/
+nav.header-navigation {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-navigation .header-nav-button {
+    height: 50px;
+    width: 50px;
+    float: left;
+    background-color: #f4f5f773;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);
+    transition: all 0.3s ease-out;
+    overflow: hidden;
+}
+
+.header-navigation .header-nav-button:hover {
+    width: 200px;
+}
+
+.header-navigation .header-nav-button .header-icon {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 50px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.header-navigation .header-nav-button .header-icon i {
+    font-size: 25px;
+    line-height: 50px;
+}
+
+.header-navigation .header-nav-button:hover .header-icon i {
+    color: #f4f5f7;
+}
+
+.header-navigation .header-nav-button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 50px;
+    margin-left: 10px;
+}
+
+.header-navigation .header-nav-button span a {
+    transition: all 0.3s;
+}
+
+.header-navigation .header-nav-button:nth-child(1):hover .header-icon {
+    background: #333;
+}
+.header-navigation .header-nav-button:nth-child(2):hover .header-icon {
+    background: #1da1f2;
+}
+.header-navigation .header-nav-button:nth-child(3):hover .header-icon {
+    background: #e1306c;
+}
+
+.header-navigation .header-nav-button:nth-child(1):hover span a {
+    color: #333;
+}
+.header-navigation .header-nav-button:nth-child(2):hover span a {
+    color: #1da1f2;
+}
+.header-navigation .header-nav-button:nth-child(3):hover span a {
+    color: #e1306c;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+footer {
+    position: absolute;
+    width: 100%;
+    background-color: var(--main-text-color);
+    text-align: center;
+    padding: 14px 0;
+}
+
+footer p {
+    color: #f4f4f4;
+    font-size: 0.875rem;
+}
