@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- ローディング画面 -->
-    <!-- <div class="loader">
+    <div class="loader">
         <div class="loader-inner">
             <div class="char-content">
                 <img src="./img/loader-char.png" alt="Character" class="character">
@@ -28,7 +28,7 @@
                 <span class="loader-msg"><p>loading・・</p></span>
             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- ヘッダー -->
     <div class="scroll-container">
@@ -80,19 +80,23 @@
                             <div class="history-date">12/18/2023</div>
                             <div class="history-content">本サイトをレンタルサーバにアップロード</div>
                         </div>
-                        <div class="history">
+                        <div class="history history-hidden">
                             <div class="history-date">12/19/2023</div>
                             <div class="history-content">ドメイン取得</div>
                         </div>
-                        <!-- <div class="history">
+                        <div class="history history-hidden">
                             <div class="history-date">12/27/2023</div>
                             <div class="history-content">レンタルサーバ移行完了</div>
                         </div>
-                        <div class="history">
+                        <div class="history history-hidden">
                             <div class="history-date">12/31/2023</div>
                             <div class="history-content">年末リファクタリング作業開始</div>
-                        </div> -->
+                        </div>
                     </div>
+                    <ul class="pagination" id="pagination">
+                        <li onclick="showPage(1)">1</li>
+                        <li onclick="showPage(2)">2</li>
+                    </ul>      
                 </section>
                 <footer>
                     <div class="wrapper">

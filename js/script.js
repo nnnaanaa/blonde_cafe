@@ -31,3 +31,21 @@
 /*-------------------------------------------
 メイン
 -------------------------------------------*/
+function showPage(pageNumber) {
+    const itemsPerPage = 3;
+    const historyItems = document.querySelectorAll('.history');
+    const totalPages = Math.ceil(historyItems.length / itemsPerPage);
+
+    for (let i = 0; i < historyItems.length; i++) {
+        historyItems[i].classList.add('history-hidden');
+    }
+
+    const startIndex = (pageNumber - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+
+    for (let i = startIndex; i < endIndex; i++) {
+        if (historyItems[i]) {
+            historyItems[i].classList.remove('history-hidden');
+        }
+    }
+}

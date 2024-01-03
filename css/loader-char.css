@@ -1,6 +1,6 @@
 :root {
     /* ローディング画面の長さはここで制御 */
-    --loader-duration: 3s
+    --loader-duration: 0s
 }
 
 /*-------------------------------------------
@@ -67,4 +67,24 @@
 .loader-msg {
     color: #f4f5f7;
     font-size: 1.5rem;
+    text-align: center;
+}
+
+/*-------------------------------------------
+ローディング画面（モバイル端末）
+-------------------------------------------*/
+@media (max-width: 600px) {
+    .character {
+        width: 120px;
+        margin-bottom: 1rem;
+    }
+
+    @keyframes skipMotion {
+        25% {
+            transform: translateX(20px) rotate(15deg); /* 左に50px移動 */
+        }
+        75% {
+            transform: translateX(-20px) rotate(-15deg); /* 右に50px移動 */
+        }
+    }
 }

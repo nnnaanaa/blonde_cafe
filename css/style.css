@@ -89,6 +89,7 @@ img {
 }
 
 h1[class~="rotate-word"] {
+    color: #443e43d4;
     display: block;
     height: 80px;
     font-size: 3.5rem;
@@ -116,14 +117,11 @@ span[class~="rotate-word"] {
         transform: translateY(-210px);
     }
 }
+
 section.upper-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-section.upper-content h1 a {
-    color: var(--main-text-color);
 }
 
 /*-------------------------------------------
@@ -220,17 +218,24 @@ nav.header-navigation {
     justify-content: center;
 }
 
+.main-content section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50vh;
+}
+
 .history-container {
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    gap: 1rem;
 }
 
 .history {
-    width: 80%;
     text-align: start;
     font-size: 1.25rem;
+    height: 130px;
 }
 
 .history:nth-child(even) {
@@ -270,8 +275,8 @@ nav.header-navigation {
     width: 40%;
     height: 40px;
     position: absolute;
-    top: -45%;
-    left: -45%;
+    top: -40%;
+    left: -40%;
     transform: rotate(-45deg);
     content: "\f004";
     color: #c94249cb;
@@ -291,6 +296,7 @@ nav.header-navigation {
     display: inline-block
 }
 
+/* 円形要素 */
 .history-content:before {
     position: absolute;
     top: 50%;
@@ -303,6 +309,36 @@ nav.header-navigation {
     font-size: 160px;
     font-family: fontAwesome;
     z-index: -1;
+}
+
+/*-------------------------------------------
+ページネーション機能
+-------------------------------------------*/
+/* 後々改良予定 */
+.pagination {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.pagination li {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #c94249cb;
+    color: var(--main-background-color);
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.history-hidden {
+    display: none;
 }
 
 /*-------------------------------------------
