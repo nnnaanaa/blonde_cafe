@@ -1,6 +1,13 @@
 /* モバイル端末用 */
 
 /*-------------------------------------------
+共通
+-------------------------------------------*/
+.page-title {
+    font-size: 2.4rem;
+}
+
+/*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
 .header {
@@ -8,25 +15,29 @@
 }
 
 section.upper-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: start;
     gap: 2rem;
 }
 
 h1[class~="rotate-word"] {
     height: 50px;
-    font-size: 2.2rem;
+    font-size: 2.6rem;
 }
 
 @keyframes move-word {
     100% {
-        transform: translateY(-120px);
+        transform: translateY(-150px);
     }
 }
 
 /*-------------------------------------------
 ヘッダーナビゲーション
 -------------------------------------------*/
+nav.header-navigation {
+    gap: 1.25rem;
+}
+
 .header-navigation .header-nav-button {
     height: 40px;
     width: 40px;
@@ -67,27 +78,43 @@ h1[class~="rotate-word"] {
 }
 
 .main-content {
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .main-content section {
     flex-direction: column;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
 }
 
 .history-container {
-    gap: 1.5rem;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0;
+    height: 400px;
 }
 
-.history {
-    text-align: center;
-    height: 130px;
+.history:nth-child(3n-2) {
+    margin-left: 0px;
 }
 
-.history:nth-child(even) {
-    text-align: center;
+.history:nth-of-type(3n) {
+    margin-left: 0px;
 }
 
 /* 各"history"の装飾 */
+.history {
+    height: 140px;
+}
+
+.history-content {
+    display: flex;
+    gap: 1rem;
+}
+
 .history-date {
     width: 30%;
     height: 100px;
@@ -97,7 +124,9 @@ h1[class~="rotate-word"] {
 
 /* 円形要素 */
 .history-date:before {
-    font-size: 80px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
 }
 
 /* ハート要素 */
@@ -105,28 +134,23 @@ h1[class~="rotate-word"] {
     top: -35%;
     left: -35%;
     font-size: 30px;
+    color: #24292ecc;
 }
 
-.history-content {
-    font-size: 0.875rem;
-    width: 60%;
-    text-align: center;
+.history-text {
+    color: #f4f5f7;
+    width: 160px;
 }
 
-.history-content:before {
+/* 円形要素 */
+.history-text:before {
     display: none;
 }
 
 /*-------------------------------------------
 ページネーション機能
 -------------------------------------------*/
-/* 後々改良予定 */
 .pagination {
     flex-direction: row;
-}
-
-.pagination li {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    align-items: flex-end;
 }
