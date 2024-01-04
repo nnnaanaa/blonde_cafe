@@ -4,7 +4,8 @@
 共通
 -------------------------------------------*/
 .page-title {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    padding-bottom: 1rem;
 }
 
 /*-------------------------------------------
@@ -22,12 +23,12 @@ section.upper-content {
 
 h1[class~="rotate-word"] {
     height: 50px;
-    font-size: 2.6rem;
+    font-size: 2.2rem;
 }
 
 @keyframes move-word {
     100% {
-        transform: translateY(-150px);
+        transform: translateY(-125px);
     }
 }
 
@@ -36,37 +37,42 @@ h1[class~="rotate-word"] {
 -------------------------------------------*/
 nav.header-navigation {
     gap: 1.25rem;
+    width: 80%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1rem;
 }
 
 .header-navigation .header-nav-button {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0);
     margin: 0;
+}
+
+.header-navigation .header-nav-button:hover {
+    width: 30px;
 }
 
 .header-navigation .header-nav-button:first-child {
     margin-left: 0;
 }
 
-.header-navigation .header-nav-button:hover {
-    width: 160px;
-}
-
 .header-navigation .header-nav-button .header-icon {
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-}
-
-.header-navigation .header-nav-button .header-icon i {
-    font-size: 22px;
-    line-height: 40px;
+    display: none;
 }
 
 .header-navigation .header-nav-button span {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 1rem;
+    margin-left: 0px;
+}
+
+.header-navigation .header-nav-button span a {
+    color: var(--main-text-color);
 }
 
 /*-------------------------------------------
@@ -77,24 +83,18 @@ nav.header-navigation {
     background-image: url("../img/main-header-lower-lp.png");
 }
 
-.main-content {
-    justify-content: center;
-}
-
 .main-content section {
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 0.875rem;
 }
 
 .history-container {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    min-height: auto;
     justify-content: center;
     gap: 0;
-    height: 400px;
 }
 
 .history:nth-child(3n-2) {
@@ -107,7 +107,7 @@ nav.header-navigation {
 
 /* 各"history"の装飾 */
 .history {
-    height: 140px;
+    height: 100px;
 }
 
 .history-content {
@@ -138,7 +138,7 @@ nav.header-navigation {
 }
 
 .history-text {
-    color: #f4f5f7;
+    color: #fcdfb6c9;
     width: 160px;
 }
 
