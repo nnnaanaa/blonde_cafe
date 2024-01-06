@@ -69,7 +69,7 @@ img {
     height: 100vh;
     background-image: url("../img/main-header.png");
     background-color: #24292ecc;
-    background-blend-mode: overlay;
+    background-blend-mode: multiply;
 }
 
 .big-bg {
@@ -222,7 +222,7 @@ nav.header-navigation {
     height: 100vh;
     background-image: url("../img/main-header-lower.png");
     background-color: #24292ecc;
-    background-blend-mode: overlay;
+    background-blend-mode: multiply;
 }
 
 .main-content {
