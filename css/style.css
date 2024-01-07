@@ -84,19 +84,21 @@ img {
 }
 
 .header-content {
-    height: 70vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 100px;
-    justify-content: center;
+    justify-content: space-between;
+    padding-top: 40px;
 }
 
 section.upper-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    flex-direction: row;
+    align-items: start;
+    gap: 0.5rem;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
 }
 
 .rotate-word {
@@ -143,12 +145,38 @@ span[class~="rotate-word"] {
 自己紹介
 -------------------------------------------*/
 .lower-content {
+    font-family: 'Cherry Bomb One', system-ui;
+    width: 100%;
     padding: 10px 20px;
     color: var(--lavender-color);
     line-height: 2rem;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    transition: all 0.5s;
 }
 
+.lower-content a {
+    color: #00BBDD;
+    position: relative;
+}
+
+.lower-content a:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #00BBDD;
+    bottom: -3px;
+    transform: scale(0, 1);
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;   /*変形の時間*/
+}
+    
+.lower-content a:hover:after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+}
 /*-------------------------------------------
 メインコンテンツ
 -------------------------------------------*/
