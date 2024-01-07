@@ -9,17 +9,20 @@
     <script src="https://kit.fontawesome.com/356d1883f5.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sofia&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins&family=Sacramento&family=Sofia&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loader-char.css">
+    <link rel="stylesheet" href="./css/frame-border.css">
     <link rel="stylesheet" href="./css/style-lp.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="./css/style-pc.css" media="(min-width: 600px)">
     <!-- ファビコン -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16/favicon-16x16.png"><link rel="manifest" href="/favicon_package_v0.16/site.webmanifest"><link rel="mask-icon" href="/favicon_package_v0.16//safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff">
     <title>Blonde Cafe</title>
 </head>
 <body>
     <!-- ローディング画面 -->
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader-inner">
             <div class="char-content">
                 <img src="./img/loader-char.png" alt="Character" class="character">
@@ -28,16 +31,24 @@
                 <span class="loader-msg"><p>loading・・</p></span>
             </div>
         </div>
+    </div> -->
+
+    <!-- 外枠 -->
+    <div class="frame-border">
+        <div class="left-border"></div>
+        <div class="top-border"></div>
+        <div class="right-border"></div>
+        <div class="bottom-border"></div>
     </div>
 
     <!-- ヘッダー -->
-    <div class="scroll-container">
+    <div class="main-bg scroll-container">
         <div class="header big-bg scroll-container-inner">
             <div class="header-content wrapper">
                 <section class="upper-content">
                     <h1 class="rotate-word">
-                        <span class="rotate-word">nnnaanaa's <span style="color: #24292ecc;">Site</span></span>
-                        <span class="rotate-word">blonde <span style="color: #24292ecc;">Cafe</span></span>
+                        <span class="rotate-word">nnnaanaa's <span class="rotate-word-deep-color">Site</span></span>
+                        <span class="rotate-word">blonde <span class="rotate-word-deep-color">Cafe</span></span>
                     </h1>
                     <nav class="header-navigation">
                         <div class="header-nav-button">
@@ -70,46 +81,77 @@
                 <section>
                     <div class="history-container">
                         <div class="history">
-                            <div class="history-content"><span class="history-date">12/17/2023</span><span class="history-text">本サイトをリリースしました</span></div>
+                            <div class="history-content"><span class="history-date">2023/12/17</span><span class="history-text">本サイトをリリースしました</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">12/17/2023</span><span class="history-text">本サイトをデプロイ予定</span></div>
+                            <div class="history-content"><span class="history-date">2023/12/17</span><span class="history-text">本サイトをデプロイ予定</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">12/18/2023</span><span class="history-text">本サイトをレンタルサーバにアップロード</span></div>
+                            <div class="history-content"><span class="history-date">2023/12/18</span><span class="history-text">本サイトをレンタルサーバにアップロード</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">12/19/2023</span><span class="history-text">ドメイン取得</span></div>
+                            <div class="history-content"><span class="history-date">2023/12/19</span><span class="history-text">ドメイン取得</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">12/27/2023</span><span class="history-text">レンタルサーバ移行完了</span></div>
+                            <div class="history-content"><span class="history-date">2023/12/27</span><span class="history-text">レンタルサーバ移行完了</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">12/31/2023</span><span class="history-text">年末リファクタリング作業開始</span></div>
+                            <div class="history-content"><span class="history-date">2023/12/31</span><span class="history-text">年末リファクタリング作業開始</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">01/01/2024</span><span class="history-text">元旦</span></div>
+                            <div class="history-content"><span class="history-date">2024/01/01</span><span class="history-text">元旦</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">01/01/2024</span><span class="history-text">長すぎる元旦</span></div>
+                            <div class="history-content"><span class="history-date">2024/01/01</span><span class="history-text">長すぎる元旦</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">01/01/2024</span><span class="history-text">長すぎる元旦_v2</span></div>
+                            <div class="history-content"><span class="history-date">2024/01/01</span><span class="history-text">長すぎる元旦_v2</span></div>
                         </div>
                         <div class="history">
-                            <div class="history-content"><span class="history-date">01/01/2024</span><span class="history-text">そろそろやめませんか元旦</span></div>
+                            <div class="history-content"><span class="history-date">2024/01/01</span><span class="history-text">そろそろやめませんか元旦</span></div>
                         </div>
                     </div>
                     <ul class="pagination" id="pagination"></ul>
                 </section>
-                <footer>
-                    <div class="wrapper">
-                        <p><small>&copy; 2023 nnnaanaa</small></p>
-                    </div>
-                </footer>
             </div>
         </div>
+
+        <div class="contact big-bg scroll-container-inner">
+            <div class="contact-content wrapper">
+                <h2 class="page-title">Contact</h2>
+                <section>
+                    <form class="contact-form" action="#">
+                        <div class="input-container">
+                            <div class="left-input">
+                                <div>
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="your-name">
+                                </div>
+                                <div>
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="your-email">
+                                </div>
+                            </div>
+                            <div class="right-input">
+                                <div>
+                                    <label for="message">Message</label>
+                                    <textarea name="your-message" id="message"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="button" value="Send">
+                    </form>
+                </section>
+            </div>
+            <!-- フッター -->
+            <footer>
+                <div class="wrapper">
+                    <p><small>&copy; 2023 nnnaanaa</small></p>
+                </div>
+            </footer>
+        </div>
     </div>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/loader-char.js"></script>
     <script src="./js/script.js"></script>
 </body>

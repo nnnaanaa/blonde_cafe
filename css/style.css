@@ -4,6 +4,10 @@ Root
 :root {
     --main-text-color: #24292e;
     --main-background-color: #f4f5f7;
+    --blonde-color: #fcdfb6cf;
+    --lavender-color: #d2daff;
+    --deep-lavender-color: #545766;
+    --inset-border-color: rgba(255,255,255,0.5);
 }
 
 /*-------------------------------------------
@@ -14,7 +18,6 @@ Root
 }
 
 body {
-    background-color: var(--main-background-color);
     color: var(--main-text-color);
     font-size: 100%;
     height: 100vh;
@@ -42,8 +45,7 @@ img {
 }
 
 .page-title {
-    font-family: 'Sofia', cursive;
-    color: #fcdfb6c9;
+    font-family: 'Cherry Bomb One', system-ui;
     font-weight: 600;
     font-size: 4rem;
 }
@@ -52,14 +54,26 @@ img {
     text-align:  center;
 }
 
-.scroll-container {
-    height: 100vh;
-    overflow: auto;
-    scroll-snap-type: y mandatory;
+.main-bg {
+    background: url("/img/background-img.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-color: #24292e6b;
+    background-blend-mode: multiply;
 }
 
-.scroll-container-inner {
-    scroll-snap-align: center;
+/* 徐々に画像を拡大する */
+@media (max-width: 900px) {
+    .main-bg {
+        background-size: 150%;
+    }
+}
+
+@media (max-width: 500px) {
+    .main-bg {
+        background-size: 250%;
+    }
 }
 
 /*-------------------------------------------
@@ -67,14 +81,6 @@ img {
 -------------------------------------------*/
 .header {
     height: 100vh;
-    background-image: url("../img/main-header.png");
-    background-color: #24292ecc;
-    background-blend-mode: multiply;
-}
-
-.big-bg {
-    background-size: cover;
-    background-position: center top;
 }
 
 .header-content {
@@ -95,15 +101,19 @@ section.upper-content {
 
 .rotate-word {
     overflow: hidden;
-    font-family: 'Sofia', cursive;
+    font-family: 'Cherry Bomb One', system-ui;
     animation: rotation-word 4s 1.2s infinite;
 }
 
 h1[class~="rotate-word"] {
-    color: #fcdfb6c9;
+    color: var(--lavender-color);
     display: block;
     height: 100px;
     font-size: 4.5rem;
+}
+
+.rotate-word-deep-color {
+    color: var(--deep-lavender-color);
 }
 
 span[class~="rotate-word"] {
@@ -130,89 +140,13 @@ span[class~="rotate-word"] {
 }
 
 /*-------------------------------------------
-ヘッダーナビゲーション
--------------------------------------------*/
-nav.header-navigation {
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-}
-
-.header-navigation .header-nav-button {
-    height: 50px;
-    width: 50px;
-    float: left;
-    background-color: #f4f5f773;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, .2);
-    transition: all 0.3s ease-out;
-    overflow: hidden;
-}
-
-.header-navigation .header-nav-button:hover {
-    width: 200px;
-}
-
-.header-navigation .header-nav-button .header-icon {
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 50px;
-    text-align: center;
-    transition: all 0.3s;
-}
-
-.header-navigation .header-nav-button .header-icon i {
-    font-size: 25px;
-    line-height: 50px;
-}
-
-.header-navigation .header-nav-button:hover .header-icon i {
-    color: #f4f5f7;
-}
-
-.header-navigation .header-nav-button span {
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 50px;
-    margin-left: 10px;
-}
-
-.header-navigation .header-nav-button span a {
-    transition: all 0.3s;
-}
-
-.header-navigation .header-nav-button:nth-child(1):hover .header-icon {
-    background: #333;
-}
-.header-navigation .header-nav-button:nth-child(2):hover .header-icon {
-    background: #1da1f2;
-}
-.header-navigation .header-nav-button:nth-child(3):hover .header-icon {
-    background: #e1306c;
-}
-
-.header-navigation .header-nav-button:nth-child(1):hover span a {
-    color: #333;
-}
-.header-navigation .header-nav-button:nth-child(2):hover span a {
-    color: #1da1f2;
-}
-.header-navigation .header-nav-button:nth-child(3):hover span a {
-    color: #e1306c;
-}
-
-/*-------------------------------------------
-自己紹介？
+自己紹介
 -------------------------------------------*/
 .lower-content {
-    color: #fcdfb6c9;
+    padding: 10px 20px;
+    color: var(--lavender-color);
     line-height: 2rem;
+    font-size: 1rem;
 }
 
 /*-------------------------------------------
@@ -220,48 +154,48 @@ nav.header-navigation {
 -------------------------------------------*/
 .main {
     height: 100vh;
-    background-image: url("../img/main-header-lower.png");
-    background-color: #24292ecc;
-    background-blend-mode: multiply;
 }
 
 .main-content {
-    height: 70vh;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
+    gap: 1rem;
+}
+
+.main-content .page-title {
+    color: var(--lavender-color);
 }
 
 .main-content section {
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 20px;
+    padding-top: 50px;
 }
 
+/* 更新内容 */
 .history-container {
     width: 78%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 440px;
+    align-items: center;
+    gap: 10px;
+    min-height: 500px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .history {
     position: relative;
     font-size: 1.25rem;
     height: 120px;
-}
-
-.history:nth-child(3n-2) {
-    margin-left: -45%;
-}
-
-.history:nth-of-type(3n) {
-    margin-left: 45%;
 }
 
 .history-content {
@@ -278,10 +212,10 @@ nav.header-navigation {
     height: 100px;
     text-align: center;
     z-index: 3;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Cherry Bomb One', system-ui;
     line-height: 100px;
     font-size: 1rem;
-    color: var(--main-background-color);
+    color: var(--main-text-color);
 }
 
 /* 円形要素 */
@@ -293,7 +227,7 @@ nav.header-navigation {
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    background-color: #24292ecc;
+    background-color: var(--lavender-color);
     width: 100px;
     height: 100px;
     border-radius: 50px;
@@ -310,7 +244,7 @@ nav.header-navigation {
     left: -40%;
     transform: rotate(-45deg);
     content: "\f004";
-    color: #24292ecc;
+    color: var(--lavender-color);
     font-size: 40px;
     font-family: fontAwesome;
     z-index: -1;
@@ -320,55 +254,10 @@ nav.header-navigation {
     position: relative;
     display: inline-block;
     margin-left: 1rem;
-    /* height: 120px; */
-    width: 120px;
+    width: 360px;
     z-index: 2;
-}
-
-/* 円形要素 */
-.history-text:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #fcdfb6c9;
-    width: 150px;
-    height: 150px;
-    z-index: -1;
-    border-radius: 75px;
-    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.45);
-}
-
-/* 要素がふわっと表示される */
-/* 初回に訪れた時もふわっと表示されるようにしたい */
-.history:not([history-hidden]):nth-of-type(3n-2) {
-    opacity: 0;
-    animation: huwatto_v1 2s forwards;
-}
-
-.history:not([history-hidden]):nth-of-type(3n-1) {
-    opacity: 0;
-    animation: huwatto_v1 2s 0.2s forwards;
-}
-
-.history:not([history-hidden]):nth-of-type(3n) {
-    opacity: 0;
-    animation: huwatto_v1 2s 0.4s forwards;
-}
-
-@keyframes huwatto_v1 {
-    0% {
-        scale: 0.9;
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        scale: 1;
-    }
+    color: var(--lavender-color);
+    padding: 10px;
 }
 
 /*-------------------------------------------
@@ -377,7 +266,7 @@ nav.header-navigation {
 .pagination {
     height: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     text-align: center;
     list-style: none;
@@ -392,6 +281,7 @@ nav.header-navigation {
     line-height: 40px;
     border-radius: 50px;
     color: var(--main-background-color);
+    font-family: 'Cherry Bomb One', system-ui;
     cursor: pointer;
     z-index: 2;
 }
@@ -404,7 +294,7 @@ nav.header-navigation {
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     content: "\f111";
-    color: #24292ecc;
+    color: var(--deep-lavender-color);
     font-size: 40px;
     font-family: fontAwesome;
     z-index: -1;
@@ -421,8 +311,7 @@ nav.header-navigation {
 
 .pagination-button.active-button::before {
     content: "";
-    background-color: #fcdfb6c9;
-    /* background-image: url("/img/loader-char.png"); */
+    background-color: var(--lavender-color);
     display: inline-block;
     background-size: contain;
     vertical-align: middle;
@@ -430,6 +319,83 @@ nav.header-navigation {
     height: 40px;
     z-index: -1;
     border-radius: 20px;
+}
+
+/*-------------------------------------------
+コンタクト
+-------------------------------------------*/
+.contact {
+    height: 100vh;
+}
+
+.contact-content {
+    max-height: 80vh;
+    padding-bottom: 120px;
+}
+
+.contact-content .page-title {
+    color: var(--lavender-color);
+}
+
+.contact-content section {
+    margin-top: 2rem;
+}
+
+.contact-form .input-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-input,
+.right-input {
+    width: 50%;
+}
+
+label {
+    font-size: 1.125rem;
+    display: block;
+    color: var(--lavender-color);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    background: rgba(255, 255, 255, .3);
+    backdrop-filter: blur(20px);
+    border: 1px #fff solid;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+}
+
+textarea {
+    width: 100%;
+    height: 8rem;
+}
+
+input[type="submit"] {
+    text-align: center;
+    border: 1px #fff solid;
+    color: #fff;
+    border-radius: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    line-height: 1;
+    background-color: var(--deep-lavender-color);
 }
 
 /*-------------------------------------------

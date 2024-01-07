@@ -1,6 +1,7 @@
 :root {
     /* ローディング画面の長さはここで制御 */
-    --loader-duration: 3s
+    --loader-duration: 3s;
+    --deep-lavender-color: #545766;
 }
 
 /*-------------------------------------------
@@ -11,7 +12,7 @@
     z-index: 1000;
     width: 100%;
     height: 100vh;
-    background-color: #24292e;
+    background-color: var(--deep-lavender-color);
 }
 
 .loader-inner {
@@ -51,13 +52,13 @@
         transform: translateX(0);
     }
     25% {
-        transform: translateX(40px) rotate(15deg); /* 左に50px移動 */
+        transform: translateX(40px); /* 左に50px移動 */
     }
     50% {
         transform: translateX(0);
     }
     75% {
-        transform: translateX(-40px) rotate(-15deg); /* 右に50px移動 */
+        transform: translateX(-40px); /* 右に50px移動 */
     }
     100% {
         transform: translateX(0);
