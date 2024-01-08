@@ -4,7 +4,6 @@
 ヘッダー
 -------------------------------------------*/
 
-
 /*-------------------------------------------
 メイン
 -------------------------------------------*/
@@ -71,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
 /*-------------------------------------------
 ScrollReveal
 -------------------------------------------*/
-ScrollReveal({ reset: true, distance: "40px" , duration: 2000, delay: 200});
+ScrollReveal({ reset: false, distance: "60px" , duration: 2000, delay: 200});
+ScrollReveal().reveal('.lower-content', { reset: true, delay: 100, origin: "left", duration: 2000});
 ScrollReveal().reveal('.page-title', { delay: 100, origin: "left", duration: 2000});
 ScrollReveal().reveal('.history-container', { delay: 100, origin: "bottom", duration: 2000});
 ScrollReveal().reveal('.contact-form', { delay: 100, origin: "bottom", duration: 2000});

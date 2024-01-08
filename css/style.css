@@ -95,10 +95,11 @@ img {
 section.upper-content {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
     gap: 0.5rem;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 100px;
 }
 
 .rotate-word {
@@ -145,15 +146,19 @@ span[class~="rotate-word"] {
 自己紹介
 -------------------------------------------*/
 .lower-content {
-    font-family: 'Cherry Bomb One', system-ui;
     width: 100%;
-    padding: 10px 20px;
+    font-family: 'Cherry Bomb One', system-ui;
     color: var(--lavender-color);
     line-height: 2rem;
     font-size: 1.25rem;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, .1);
     transition: all 0.5s;
+    padding: 10px;
+}
+
+.lower-content ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .lower-content a {

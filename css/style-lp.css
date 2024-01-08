@@ -38,12 +38,21 @@ section.upper-content {
 h1[class~="rotate-word"] {
     height: 50px;
     font-size: 2.2rem;
+    text-align: center;
 }
 
 @keyframes move-word {
     100% {
         transform: translateY(-125px);
     }
+}
+
+/*-------------------------------------------
+自己紹介
+-------------------------------------------*/
+.lower-content {
+    line-height: 1.5rem;
+    font-size: 1rem;
 }
 
 /*-------------------------------------------
@@ -82,9 +91,9 @@ nav.header-navigation {
 
 .history-container {
     width: 100%;
-    min-height: auto;
     justify-content: center;
     gap: 0;
+    min-height: 350px;
 }
 
 .history:nth-child(3n-2) {
