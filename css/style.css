@@ -6,7 +6,9 @@ Root
     --main-background-color: #f4f5f7;
     --blonde-color: #fcdfb6cf;
     --lavender-color: #d2daff;
+    --middle-lavender-color: #A8A4CE;
     --deep-lavender-color: #545766;
+    --more-deep-lavender-color: #495C83;
     --inset-border-color: rgba(255,255,255,0.5);
 }
 
@@ -60,7 +62,8 @@ img {
     background-repeat: no-repeat;
     background-position: center top;
     background-color: #24292e6b;
-    background-blend-mode: multiply;
+    background-blend-mode: color-burn;
+    position: relative;
 }
 
 /* 徐々に画像を拡大する */
@@ -161,8 +164,21 @@ span[class~="rotate-word"] {
     width: 100%;
 }
 
+/* 丸要素 */
+.lower-content ul li::before {
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    content: "\f111";
+    color: var(--more-deep-lavender-color);
+    font-size: 0.55rem;
+    margin-right: 0.5rem;
+    font-family: fontAwesome;
+    z-index: 1;
+}
+
 .lower-content a {
-    color: #00BBDD;
+    color: var(--more-deep-lavender-color);
     position: relative;
 }
 
@@ -172,7 +188,7 @@ span[class~="rotate-word"] {
     content: '';
     width: 100%;
     height: 2px;
-    background: #00BBDD;
+    background: var(--more-deep-lavender-color);
     bottom: -3px;
     transform: scale(0, 1);
     transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/

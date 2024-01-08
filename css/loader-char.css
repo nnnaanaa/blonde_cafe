@@ -1,7 +1,6 @@
 :root {
     /* ローディング画面の長さはここで制御 */
-    --loader-duration: 3s;
-    --deep-lavender-color: #545766;
+    --loader-duration: 0.5s;
 }
 
 /*-------------------------------------------
