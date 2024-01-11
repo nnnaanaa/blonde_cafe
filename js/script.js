@@ -1,6 +1,16 @@
 "use strict";
 
 /*-------------------------------------------
+サイドナビゲーション
+-------------------------------------------*/
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.querySelector('.btn-trigger');
+    btn.addEventListener('click', function() {
+        this.classList.toggle('active');
+    });
+})
+
+/*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
 

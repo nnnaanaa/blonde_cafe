@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/loader-char.css">
     <link rel="stylesheet" href="./css/frame-border.css">
+    <link rel="stylesheet" href="/css/side-navigation.css">
     <link rel="stylesheet" href="./css/style-lp.css" media="(max-width: 600px)">
     <link rel="stylesheet" href="./css/style-pc.css" media="(min-width: 600px)">
     <!-- ファビコン -->
@@ -36,20 +37,25 @@
     <!-- 外枠 -->
     <div class="frame-border">
         <div class="left-border"></div>
-        <div class="top-border">
-        </div>
+        <div class="top-border"></div>
         <div class="right-border"></div>
-        <div class="bottom-border">
-            <div class="frame-icon">
-                <div class="mag-icon-box">
-                    <i class="fa-solid fa-mug-saucer"></i>
-                </div>
-                <div class="heart-icon-box">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
+        <div class="bottom-border"></div>
+    </div>
+
+    <!-- ハンバーガメニュ -->
+    <div class="sidenav-content">
+        <section>
+            <nav>
+                <ul>
+                </ul>
+            </nav>
+        </section>
+        <section>
+            <div class="btn-trigger" id="btn07">
+                <span></span>
+                <span></span>
             </div>
-        </div>
+        </section>
     </div>
 
     <!-- ヘッダー -->
@@ -61,7 +67,7 @@
                         <span class="rotate-word">nnnaanaa <span class="rotate-word-deep-color">Site</span></span>
                         <span class="rotate-word">blonde <span class="rotate-word-deep-color">Cafe</span></span>
                     </h1>
-                    <nav class="header-navigation">
+                    <!-- <nav class="header-navigation">
                         <div class="header-nav-button">
                             <div class="header-icon"><i class="fab fa-github"></i></div>
                             <span><a href="https://github.com/nnnaanaa">Github</a></span>
@@ -74,7 +80,7 @@
                           <div class="header-icon"><i class="fab fa-instagram"></i></div>
                           <span><a href="https://www.instagram.com/">Instagram</a></span>
                         </div>
-                  </nav>
+                  </nav> -->
                 </section>
                 <section class="lower-content">
                     <ul>
@@ -166,6 +172,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/loader-char.js"></script>
     <script src="./js/frame-border.js"></script>
+    <script src="./js/side-navigation.js"></script>
     <script src="./js/script.js"></script>
 </body>
 </html>
