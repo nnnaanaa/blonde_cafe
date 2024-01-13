@@ -189,7 +189,7 @@ span[class~="rotate-word"] {
     width: 100%;
     height: 2px;
     background: var(--more-deep-lavender-color);
-    bottom: -3px;
+    bottom: -1px;
     transform: scale(0, 1);
     transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
     transition: transform 0.3s;   /*変形の時間*/
@@ -245,6 +245,26 @@ span[class~="rotate-word"] {
     position: relative;
     font-size: 1.25rem;
     height: 120px;
+}
+
+.history-hidden {
+    display: none;
+}
+
+.history:not(.history-hidden) {
+    opacity: 0;
+    animation: historyDisplay 1s ease-in-out forwards;
+    transform: translateY(60px)
+}
+
+@keyframes historyDisplay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
 }
 
 .history-content {
@@ -347,10 +367,6 @@ span[class~="rotate-word"] {
     font-size: 40px;
     font-family: fontAwesome;
     z-index: -1;
-}
-
-.history-hidden {
-    display: none;
 }
 
 /* アクティブ状態のボタン */

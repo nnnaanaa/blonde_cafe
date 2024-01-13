@@ -51,13 +51,13 @@
         transform: translateX(0);
     }
     25% {
-        transform: translateX(40px); /* 左に50px移動 */
+        transform:  rotate(15deg); /* 左に50px移動 */
     }
     50% {
         transform: translateX(0);
     }
     75% {
-        transform: translateX(-40px); /* 右に50px移動 */
+        transform: rotate(-15deg); /* 右に50px移動 */
     }
     100% {
         transform: translateX(0);
@@ -68,6 +68,8 @@
     color: #f4f5f7;
     font-size: 1.5rem;
     text-align: center;
+    font-family: 'Cherry Bomb One', system-ui;
+    font-weight: 400;
 }
 
 /*-------------------------------------------
@@ -77,14 +79,5 @@
     .character {
         width: 120px;
         margin-bottom: 1rem;
-    }
-
-    @keyframes skipMotion {
-        25% {
-            transform: translateX(20px) rotate(15deg); /* 左に50px移動 */
-        }
-        75% {
-            transform: translateX(-20px) rotate(-15deg); /* 右に50px移動 */
-        }
     }
 }
