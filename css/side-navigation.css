@@ -14,16 +14,17 @@
 .sidenav-bg {
     width: 100%;
     height: 100vh;
-    background: url("/img/background-img.png");
-    background-size: 100%;
+    background-color: var(--deep-lavender-color);
+    background: url("/img/background-img-back.png");
+    background-size: 80%;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
     background-color: #24292e6b;
     background-blend-mode: multiply;
 }
 
 .sidenav-bg h1 {
-    margin-top: 50%;
+    margin-top: 40vh;
     text-align: center;
     color: var(--lavender-color);
     font-family: 'Cherry Bomb One', system-ui;
@@ -33,19 +34,19 @@
 
 /* 下から一文字ずつ飛び出す文字 */
 .textAnime {
-    height: 104px;
+    height: 103px;
     overflow: hidden;
 }
 
 .textAnime span{
     display: inline-block;
-    font-size: 65px;
-    color: #fff;
+    font-size: 70px;
+    color: var(--lavender-color);
     font-weight: bold;
     letter-spacing: 12px;
     line-height: 1;
     transform: translateY(50px);
-    animation: textAnime 0.8s forwards;
+    animation: textAnime 1s forwards;
 }
 
 @keyframes textAnime {
@@ -55,6 +56,7 @@
 }
 
 .sidenav-menu {
+    width: 100%;
     height: 100vh;
     background-color: var(--deep-lavender-color);
     font-family: 'Cherry Bomb One', system-ui;
@@ -64,11 +66,11 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    font-size: 30px;
+    font-size: 36px;
 }
 
 .sidenav-menu a {
-    color: #fff;
+    color: var(--lavender-color);
     position: relative;
 }
 
@@ -78,7 +80,7 @@
     content: '';
     width: 100%;
     height: 2px;
-    background: #fff;
+    background: var(--lavender-color);;
     bottom: -1px;
     transform: scale(0, 1);
     transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
@@ -123,7 +125,7 @@
 
 @keyframes sidenavSlider {
     from {
-        width: 20%;
+        width: 60%;
     }
     to {
         width: 100%;
@@ -305,7 +307,10 @@
     .btn-trigger span:nth-of-type(2) {
         bottom: 4px;
     }
-    
+
+    #btn07.active span {
+       background-color: var(--lavender-color);
+    }
 
     @-webkit-keyframes btn07-bar01 {
         50% {

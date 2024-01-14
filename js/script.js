@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 ScrollReveal
 -------------------------------------------*/
 ScrollReveal({ reset: false, distance: "60px" , duration: 2000, delay: 200});
-ScrollReveal().reveal('.lower-content', { reset: true, delay: 100, origin: "left", duration: 2000});
+ScrollReveal().reveal('.lower-content ul', { reset: true, delay: 100, origin: "left", duration: 2000});
 ScrollReveal().reveal('.page-title', { reset: true, delay: 100, origin: "left", duration: 2000});
 ScrollReveal().reveal('.history-container', { reset: true, delay: 100, origin: "bottom", duration: 2000});
 ScrollReveal().reveal('.contact-form', { reset: true, delay: 100, origin: "bottom", duration: 2000});
