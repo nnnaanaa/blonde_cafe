@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Noto+Sans+JP&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -50,7 +51,7 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 60px;
+  top: 40px;
   left: 20px;
   right: 0;
   border-radius: 50%;
@@ -60,18 +61,33 @@ body {
 .frame-border .top-border {
   top: 0px;
   width: 100%;
-  height: 60px;
+  height: 40px;
+  transition: all 0.5s;
+}
+.frame-border .top-border::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 40px;
+  left: 20px;
+  right: 0;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 #C6DCE4;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
 }
 .frame-border .top-border::after {
   content: "";
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 60px;
+  top: 40px;
   right: 20px;
   border-radius: 50%;
   box-shadow: 15px -15px 0 #C6DCE4;
   transform: rotate(360deg);
+  transition: all 0.5s;
 }
 .frame-border .right-border {
   right: 0px;
@@ -81,7 +97,32 @@ body {
 .frame-border .bottom-border {
   bottom: 0px;
   width: 100%;
-  height: 60px;
+  height: 40px;
+}
+.frame-border .bottom-border::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  left: 20px;
+  right: 0;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 #C6DCE4;
+  transform: rotate(180deg);
+  transition: all 0.5s;
+}
+.frame-border .bottom-border::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  right: 20px;
+  border-radius: 50%;
+  box-shadow: 15px -15px 0 #C6DCE4;
+  transform: rotate(90deg);
+  transition: all 0.5s;
 }
 
 .header {
@@ -141,6 +182,7 @@ body {
   display: flex;
   align-items: end;
   flex-direction: column;
+  font-family: "Poppins", sans-serif;
 }
 .header .header-content .lower-content .msg a {
   color: #C6DCE4;
@@ -154,11 +196,85 @@ body {
   width: 100%;
   height: 4px;
   background: #C6DCE4;
-  bottom: -1px;
+  bottom: -2px;
   transform: scale(0, 1);
   transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
   transition: transform 0.3s; /*変形の時間*/
 }
 .header .header-content .lower-content .msg a:hover::after {
   transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+
+.main {
+  height: 100vh;
+}
+
+.contact {
+  height: 100vh;
+}
+.contact .contact-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact .contact-content h2 {
+  color: #C6DCE4;
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 600;
+  font-size: 6rem;
+  text-align: center;
+}
+.contact .contact-content section .contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact .contact-content section .input-container {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+.contact .contact-content section .input-container .left-input,
+.contact .contact-content section .input-container .right-input {
+  width: 50%;
+}
+.contact .contact-content section .input-container label {
+  font-size: 1.125rem;
+  display: block;
+  color: #C6DCE4;
+}
+.contact .contact-content section .input-container input[type=text],
+.contact .contact-content section .input-container input[type=email],
+.contact .contact-content section .input-container textarea {
+  background: #C6DCE4;
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border: 1px #fff solid;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+}
+.contact .contact-content section .input-container input[type=text],
+.contact .contact-content section .input-container input[type=email] {
+  width: 100%;
+}
+.contact .contact-content section .input-container textarea {
+  width: 100%;
+  height: 8rem;
+}
+.contact .contact-content section input[type=submit] {
+  text-align: center;
+  border: 1px #fff solid;
+  color: #fff;
+  border-radius: 5px;
+  padding: 12px 24px;
+  cursor: pointer;
+  line-height: 1;
+  background-color: #C6DCE4;
 }/*# sourceMappingURL=style.css.map */
