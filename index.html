@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sacramento&family=Sofia&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/356d1883f5.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sofia&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins&family=Sofia&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Poppins&family=Sacramento&family=Sofia&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/loader-char.css">
-    <link rel="stylesheet" href="./css/frame-border.css">
-    <link rel="stylesheet" href="/css/side-navigation.css">
-    <link rel="stylesheet" href="./css/style-lp.css" media="(max-width: 600px)">
-    <link rel="stylesheet" href="./css/style-pc.css" media="(min-width: 600px)">
+
     <!-- ファビコン -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16/favicon-16x16.png"><link rel="manifest" href="/favicon_package_v0.16/site.webmanifest"><link rel="mask-icon" href="/favicon_package_v0.16//safari-pinned-tab.svg" color="#5bbad5"><meta name="msapplication-TileColor" content="#da532c"><meta name="theme-color" content="#ffffff">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon_package_v0.16/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon_package_v0.16/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon_package_v0.16/favicon-16x16.png">
+    <link rel="manifest" href="/favicon_package_v0.16/site.webmanifest">
+    <link rel="mask-icon" href="/favicon_package_v0.16//safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Blonde Cafe</title>
 </head>
 <body>
     <!-- ローディング画面 -->
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader-inner">
             <div class="char-content">
                 <img src="./img/loader-char.png" alt="Character" class="character">
@@ -32,7 +27,7 @@
                 <span class="loader-msg"><p>loading・・</p></span>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- 外枠 -->
     <div class="frame-border">
@@ -60,7 +55,7 @@
                     </div>
                 </div>
                 <div class="sidenav-bg">
-                    <h1 class="textAnime">Menu</h1>
+                    <h1 class="textAnime">Side Menu</h1>
                 </div>
             </div>
         </section>
@@ -73,9 +68,9 @@
     </div>
 
     <!-- ヘッダー -->
-    <div class="main-bg scroll-container">
-        <div class="header big-bg scroll-container-inner">
-            <div class="header-content wrapper">
+    <div class="main-bg">
+        <div class="header">
+            <div class="header-content">
                 <section class="upper-content">
                     <h1 class="rotate-word">
                         <span class="rotate-word">nnnaanaa <span class="rotate-word-deep-color">Site</span></span>
@@ -85,20 +80,14 @@
                 <section class="lower-content">
                     <div class="msg">
                         <div>My favorite programming language is <a href="https://www.python.org/" target="_blank" rel="noopener">Python</a></div>
-                        <div>The background image is created using a generative AI. The model used is <a href="https://civitai.com/models/131611/himawarimix" target="_blank" rel="noopener">HimawariMix</a></div>
-                    </div>
-                    <div class="work">
-                        <span>Work</span>
-                    </div>
-                    <div class="cafe">
-                        <span>Cafe</span>
+                        <div>The background image is created using a generative AI.</a></div>
                     </div>
                 </section>
             </div>
         </div>
     
         <!-- メインコンテンツ -->
-        <div class="main big-bg scroll-container-inner">
+        <div class="main big-bg">
             <div class="main-content wrapper">
                 <h2 class="page-title">history</h2>
                 <section>
@@ -139,7 +128,7 @@
             </div>
         </div>
 
-        <div class="contact big-bg scroll-container-inner">
+        <div class="contact big-bg">
             <div class="contact-content wrapper">
                 <h2 class="page-title">Contact</h2>
                 <section>
@@ -174,10 +163,10 @@
             </footer>
         </div>
     </div>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./js/loader-char.js"></script>
     <script src="./js/frame-border.js"></script>
     <script src="./js/side-navigation.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script> -->
 </body>
 </html>

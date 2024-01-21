@@ -19,7 +19,7 @@ for (let i = 0; i < textAnime.length; i++) {
   let text = textAnime[i].innerHTML;
   let textParts = "";
   text.split("").forEach(function (value, index) {
-    textParts += '<span style ="animation-delay: ' + index * 0.16 + 's ;">' + value +
+    textParts += '<span style ="animation-delay: ' + index * 0.11 + 's ;">' + value +
       '</span>';
   });
   textAnime[i].innerHTML = textParts;

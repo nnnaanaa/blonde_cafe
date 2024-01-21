@@ -48,8 +48,9 @@ img {
 
 .page-title {
     font-family: 'Cherry Bomb One', system-ui;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 4rem;
+    /* text-stroke: 1px #FFF; */
 }
 
 .sub-title {
@@ -155,7 +156,7 @@ lower-content
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr;
     gap: 1.5rem;
-    color: var(--lavender-color);
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
 }
@@ -303,7 +304,7 @@ lower-content
 
 .history-content {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     font-size: 1rem;
 }
@@ -360,7 +361,7 @@ lower-content
     margin-left: 1rem;
     width: 360px;
     z-index: 2;
-    color: var(--lavender-color);
+    color: #fff;
     padding: 10px;
 }
 
@@ -435,6 +436,7 @@ lower-content
 
 .contact-content .page-title {
     color: var(--lavender-color);
+    position: relative;
 }
 
 .contact-content section {
